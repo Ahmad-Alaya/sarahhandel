@@ -4,27 +4,27 @@ from .models import *
 
 class WaschmaschineAdmin(admin.ModelAdmin):
     search_fields = ['name', 'model', 'fassung', 'preis',]
-    list_display = ['name', 'fassung', 'model']
+    list_display = ['name', 'fassung', 'anzahl', 'model']
 
 
 class SpuelmaschineAdmin(admin.ModelAdmin):
     search_fields = ['name', 'model', 'breite', 'art']
-    list_display = ["name", "breite", 'art', 'model']
+    list_display = ["name", "breite", 'art', 'anzahl',  'model']
 
 
 class BackofenAdmin(admin.ModelAdmin):
     search_fields = ['name', 'model']
-    list_display = ['name', 'model']
+    list_display = ['name', 'anzahl',  'model']
 
 
 class BackofenHerdAdmin(admin.ModelAdmin):
     search_fields = ['name', 'model']
-    list_display = ['name', 'model', 'iduktion']
+    list_display = ['name', 'model', 'anzahl',  'iduktion']
 
 
 class KuehlschrankAdmin(admin.ModelAdmin):
     search_fields = ['name', 'model', 'type']
-    list_display = ['name', 'type', 'model']
+    list_display = ['name', 'type', 'anzahl',  'model']
 
 
 class VerkaufenAdmin(admin.ModelAdmin):

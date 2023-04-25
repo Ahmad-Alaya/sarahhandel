@@ -19,6 +19,7 @@ class Waschmaschine(models.Model):
     name = models.CharField(max_length=50, )
     fassung = models.CharField(max_length=20, choices=FASSUNG_CHOICES)
     model = models.CharField(max_length=100)
+    anzahl = models.IntegerField(default=1)
     serial_number = models.CharField(max_length=200, null=True, blank=True)
     artikel_nr = models.CharField(max_length=200, null=True, blank=True)
     bestellungsnummer = models.IntegerField(null=True, blank=True)
@@ -29,9 +30,9 @@ class Waschmaschine(models.Model):
 
     def __str__(self):
         if self.preis:
-            return f"{self.name} : {self.fassung}: {self.model} :{self.preis}"
+            return f"{self.name} : {self.fassung}: {self.model} : {self.anzahl} : {self.preis}"
         else:
-            return f"{self.name} : {self.fassung}: {self.model}"
+            return f"{self.name} : {self.fassung}: {self.anzahl} : {self.model}"
 
 
 # Klasse Spuelmaschine
@@ -51,6 +52,7 @@ class Spuelmaschine(models.Model):
     breite = models.CharField(max_length=100, choices=BREITE_CHOICESE)
     art = models.CharField(max_length=100, choices=ART_CHOICES)
     model = models.CharField(max_length=100)
+    anzahl = models.IntegerField(default=1)
     serial_number = models.CharField(max_length=200, null=True, blank=True)
     artikel_nr = models.CharField(max_length=200, null=True, blank=True)
     bestellungsnummer = models.IntegerField(null=True, blank=True)
@@ -61,15 +63,16 @@ class Spuelmaschine(models.Model):
 
     def __str__(self):
         if self.preis:
-            return f"{self.name} : {self.breite} : {self.art} : {self.model} : {self.preis}"
+            return f"{self.name} : {self.breite} : {self.art} : {self.model} : {self.anzahl} : {self.preis}"
         else:
-            return f"{self.name} : {self.breite} : {self.art} : {self.model}"
+            return f"{self.name} : {self.breite} : {self.art} : {self.anzahl} : {self.model}"
 
 
 # Klasse EinbauBackofen
 class Backofen(models.Model):
     name = models.CharField(max_length=50)
     model = models.CharField(max_length=100)
+    anzahl = models.IntegerField(default=1)
     serial_number = models.CharField(max_length=200, null=True, blank=True)
     artikel_nr = models.CharField(max_length=200, null=True, blank=True)
     bestellungsnummer = models.IntegerField(null=True, blank=True)
@@ -80,9 +83,9 @@ class Backofen(models.Model):
 
     def __str__(self):
         if self.preis:
-            return f"{self.name} : {self.model} : {self.preis}"
+            return f"{self.name} : {self.model} : {self.anzahl} : {self.preis}"
         else:
-            return f"{self.name} : {self.model}"
+            return f"{self.name} : {self.anzahl} : {self.model}"
 
 
 # Klasse BackofenHerd
@@ -95,6 +98,7 @@ class BackofenHerd(models.Model):
     name = models.CharField(max_length=50)
     model = models.CharField(max_length=100)
     iduktion = models.CharField(max_length=100, choices=JANEIN_CHOICES,)
+    anzahl = models.IntegerField(default=1)
     serial_number = models.CharField(max_length=200, null=True, blank=True)
     artikel_nr = models.CharField(max_length=200, null=True, blank=True)
     bestellungsnummer = models.IntegerField(null=True, blank=True)
@@ -105,9 +109,9 @@ class BackofenHerd(models.Model):
 
     def __str__(self):
         if self.preis:
-            return f"{self.name} : {self.model}"
+            return f"{self.name} : {self.anzahl} : {self.model}"
         else:
-            return f"{self.name} : {self.model} : {self.preis}"
+            return f"{self.name} : {self.model} : {self.anzahl} : {self.preis}"
 
 
 # Klasse Kuehlschrank
@@ -124,6 +128,7 @@ class Kuehlschrank(models.Model):
     name = models.CharField(max_length=50)
     model = models.CharField(max_length=100)
     type = models.CharField(max_length=200, choices=TYPE_CHOICES)
+    anzahl = models.IntegerField(default=1)
     serial_number = models.CharField(max_length=200, null=True, blank=True)
     artikel_nr = models.CharField(max_length=200, null=True, blank=True)
     bestellungsnummer = models.IntegerField(null=True, blank=True)
@@ -134,9 +139,9 @@ class Kuehlschrank(models.Model):
 
     def __str__(self):
         if self.preis:
-            return f"{self.name} : {self.type} : {self.model} : {self.preis}"
+            return f"{self.name} : {self.type} : {self.model} : {self.anzahl} : {self.preis}"
         else:
-            return f"{self.name} : {self.type} : {self.model}"
+            return f"{self.name} : {self.type} :  {self.anzahl} : {self.model}"
 
 
 # Klasse Verkaufen
