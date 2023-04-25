@@ -1,0 +1,16 @@
+
+<div class="mb-3">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <h1>Sells</h1>
+    <form action="." method="POST">{% csrf_token %}
+
+        {{form_verkaufen.as_p}}
+
+        <input type="submit" value="sell" class ="btn btn-primary" />
+
+
+
+    </form>
+
+</div>
+

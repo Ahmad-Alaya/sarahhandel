@@ -1,0 +1,61 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="id" />
+          <option value="help" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="rpl.models.PValue.objects" />
+          <option value="rpl.models.ANOVA.*" />
+          <option value="rpl.models.AgreementMeasure.*" />
+          <option value="rpl.models.Variable.objects" />
+          <option value="rpl.models.CorrectedPValue.objects" />
+          <option value="rpl.models.PValueCorrectionMethod.objects" />
+          <option value="rpl.models.Author.objects" />
+          <option value="rpl.models.Paper.objects" />
+          <option value="rpl.models.Study.objects" />
+          <option value="rpl.models.ResearchQuestion.objects" />
+          <option value="rpl.models.DataCollectionMethod.objects" />
+          <option value="rpl.models.DataCollectionDescription.objects" />
+          <option value="rpl.models.ParticipantSampleType.objects" />
+          <option value="rpl.models.QualitativeAnalysisMethod.objects" />
+          <option value="rpl.models.VariableCategory.objects" />
+          <option value="rpl.models.QuantitativeAnalysisMethod.objects" />
+          <option value="rpl.models.ParticipantSample.objects" />
+          <option value="rpl.models.VariableLevel.objects" />
+          <option value="rpl.models.IndependentVariable.objects" />
+          <option value="rpl.models.DependentVariable.objects" />
+          <option value="rpl.models.ResultStatistic.objects" />
+          <option value="rpl.models.ChiSquareTest.objects" />
+          <option value="rpl.models.LogisticRegression.objects" />
+          <option value="rpl.models.MultipleLinearRegression.objects" />
+          <option value="rpl.models.SimpleLinearRegression.objects" />
+          <option value="rpl.models.FactorInfo.objects" />
+          <option value="rpl.models.GroupBasedResultStatistics.objects" />
+          <option value="rpl.models.Effect.objects" />
+          <option value="rpl.models.Factor.objects" />
+          <option value="rpl.models.WilcoxonSignedRankTest.objects" />
+          <option value="rpl.models.WilcoxonRankSumTest.objects" />
+          <option value="rpl.models.IndependentTTest.objects" />
+          <option value="rpl.models.PairedTTest.objects" />
+          <option value="rpl.models.McNemarsTest.objects" />
+          <option value="rpl.models.FishersExactTest.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
